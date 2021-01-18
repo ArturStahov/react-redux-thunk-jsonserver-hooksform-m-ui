@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/redux-thunk-hooksform-mui-todo/static/css/main.1c9dbc85.chunk.css",
+    "main.js": "/redux-thunk-hooksform-mui-todo/static/js/main.ca6e5e60.chunk.js",
+    "main.js.map": "/redux-thunk-hooksform-mui-todo/static/js/main.ca6e5e60.chunk.js.map",
+    "runtime-main.js": "/redux-thunk-hooksform-mui-todo/static/js/runtime-main.2440d905.js",
+    "runtime-main.js.map": "/redux-thunk-hooksform-mui-todo/static/js/runtime-main.2440d905.js.map",
+    "static/css/2.4324847d.chunk.css": "/redux-thunk-hooksform-mui-todo/static/css/2.4324847d.chunk.css",
+    "static/js/2.f37f1d9b.chunk.js": "/redux-thunk-hooksform-mui-todo/static/js/2.f37f1d9b.chunk.js",
+    "static/js/2.f37f1d9b.chunk.js.map": "/redux-thunk-hooksform-mui-todo/static/js/2.f37f1d9b.chunk.js.map",
+    "index.html": "/redux-thunk-hooksform-mui-todo/index.html",
+    "static/css/2.4324847d.chunk.css.map": "/redux-thunk-hooksform-mui-todo/static/css/2.4324847d.chunk.css.map",
+    "static/css/main.1c9dbc85.chunk.css.map": "/redux-thunk-hooksform-mui-todo/static/css/main.1c9dbc85.chunk.css.map",
+    "static/js/2.f37f1d9b.chunk.js.LICENSE.txt": "/redux-thunk-hooksform-mui-todo/static/js/2.f37f1d9b.chunk.js.LICENSE.txt",
+    "static/media/cardHeader.7981c59e.jpg": "/redux-thunk-hooksform-mui-todo/static/media/cardHeader.7981c59e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2440d905.js",
+    "static/css/2.4324847d.chunk.css",
+    "static/js/2.f37f1d9b.chunk.js",
+    "static/css/main.1c9dbc85.chunk.css",
+    "static/js/main.ca6e5e60.chunk.js"
+  ]
+}
