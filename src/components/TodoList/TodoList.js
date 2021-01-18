@@ -11,13 +11,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { TextField } from '@material-ui/core';
 
 import { allTodos } from './todos-selector';
-import {
-  useStyles,
-  CardItem,
-  CardList,
-  Form,
-  TextArea,
-} from './StyledComponent';
+import { useStyles, CardItem, CardList, Form } from './StyledComponent';
 import bg_header from '../../image/cardHeader.jpg';
 import { deleteItem, editItem } from '../../redux/todos/todos-operation';
 
@@ -41,6 +35,7 @@ export function ToDoList() {
       return;
     }
     data.id = itemsOnEdit.id;
+    console.log(data);
     dispatch(editItem(data));
     setIsOpenEditor(false);
   };
@@ -55,18 +50,18 @@ export function ToDoList() {
                 component="img"
                 alt="Contemplative Reptile"
                 height="140"
-                image={bg_header}
+                image={item.avatar ? item.avatar : bg_header}
                 title="Contemplative Reptile"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {item.title}
+                  {item.first_name}
                 </Typography>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {item.subTitle}
+                  {item.last_name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {item.message}
+                  {item.email}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -87,50 +82,48 @@ export function ToDoList() {
               </Button>
             </CardActions>
           </Card>
-          {isOpenEditor && (
+          {isOpenEditor && item.id === itemsOnEdit.id && (
             <Form onSubmit={handleSubmit(onSubmit)}>
               <Controller
-                name="title"
+                name="first_name"
                 control={control}
-                defaultValue={item.title}
+                defaultValue={item.first_name}
                 render={({ onChange, value }) => (
                   <TextField
                     className={classes.inputText}
                     onChange={onChange}
                     value={value}
-                    label="title"
+                    label="first name"
                     variant="outlined"
                     required
                   />
                 )}
               />
               <Controller
-                name="subTitle"
+                name="last_name"
                 control={control}
-                defaultValue={item.subTitle}
+                defaultValue={item.last_name}
                 render={({ onChange, value }) => (
                   <TextField
                     className={classes.inputText}
                     onChange={onChange}
                     value={value}
-                    label="sub-title"
+                    label="last name"
                     variant="outlined"
                   />
                 )}
               />
               <Controller
-                name="message"
+                name="email"
                 control={control}
-                defaultValue={item.message}
+                defaultValue={item.email}
                 render={({ onChange, value }) => (
-                  <TextArea
+                  <TextField
                     className={classes.inputText}
                     onChange={onChange}
-                    placeholder="message"
                     value={value}
-                    label="Outlined"
+                    label="email"
                     variant="outlined"
-                    required
                   />
                 )}
               />

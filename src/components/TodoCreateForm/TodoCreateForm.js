@@ -18,7 +18,7 @@ export function ToDoCreateForm() {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Controller
-        name="title"
+        name="first_name"
         control={control}
         defaultValue=""
         render={({ onChange, value }) => (
@@ -26,14 +26,14 @@ export function ToDoCreateForm() {
             className={classes.inputText}
             onChange={onChange}
             value={value}
-            label="title"
+            label="first name"
             variant="outlined"
             required
           />
         )}
       />
       <Controller
-        name="subTitle"
+        name="last_name"
         control={control}
         defaultValue=""
         render={({ onChange, value }) => (
@@ -41,23 +41,22 @@ export function ToDoCreateForm() {
             className={classes.inputText}
             onChange={onChange}
             value={value}
-            label="sub-title"
+            label="last name"
             variant="outlined"
           />
         )}
       />
       <Controller
-        name="message"
+        name="email"
         control={control}
         defaultValue=""
         render={({ onChange, value }) => (
-          <TextArea
+          <TextField
+            className={classes.inputText}
             onChange={onChange}
-            placeholder="message"
             value={value}
-            label="Outlined"
+            label="email"
             variant="outlined"
-            required
           />
         )}
       />

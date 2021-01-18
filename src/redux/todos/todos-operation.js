@@ -9,7 +9,8 @@ import {
 export const getAllItem = () => async dispatch => {
   dispatch(action.getAllTodoRequest());
   try {
-    const { data } = await fetchGetTodo();
+    const response = await fetchGetTodo();
+    const { data } = response.data;
     dispatch(action.getAllTodoSuccess(data));
   } catch (error) {
     dispatch(action.getAllTodoError(error));
@@ -37,16 +38,18 @@ export const deleteItem = item => async dispatch => {
 };
 
 export const editItem = item => async dispatch => {
-  const { title, subTitle, message, id } = item;
+  const { first_name, last_name, email, id } = item;
   const update = {
-    title,
-    subTitle,
-    message,
+    first_name,
+    last_name,
+    email,
+    id,
   };
 
   dispatch(action.editTodoRequest());
   try {
-    const { data } = await fetchEditItem(id, update);
+    const response = await fetchEditItem(id, update);
+    const { data } = response;
     dispatch(action.editTodoSuccess(data));
   } catch (error) {
     dispatch(action.editTodoError(error));
